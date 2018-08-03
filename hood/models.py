@@ -36,6 +36,22 @@ class Profile(models.Model):
     def delete_profile(self):
         self.delete()
 
+class Business(models.Model):
+    name = models.CharField(max_lenth = 65)
+    user = models.ForeignKey(User)
+    hood = models.ForeignKey(Neighbourhood, on_delete=models.CASCADE)
+
+
+     def __str__(self):
+        return self.name
+
+
+    def save_business(self):
+        self.save()
+
+    def delete_business(self):
+        self.delete()
+
 
 
 
