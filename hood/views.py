@@ -15,4 +15,17 @@ def create_business(request):
     current_user = request.user
     owner = Profile.get_by_id(current_user)
     hood = Neighbourhood.objects.all()
-    
+
+
+    if request.method == 'POST':
+        form = BusinessForm(request.POST,request.FILES)
+        if form,is_valid():
+            new_biz=form.save(commit = False)
+            new_biz.owner = current_user
+            new_biz.hood = hood
+            new_biz.save
+            return redirect(home)
+    else:
+        form = BusinessForm()
+    return render(request,"business.html",locals())
+
