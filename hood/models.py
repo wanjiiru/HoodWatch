@@ -38,6 +38,13 @@ class Profile(models.Model):
     def delete_profile(self):
         self.delete()
 
+
+    
+    @classmethod
+    def get_by_id(cls,user_id):
+        profile = cls.objects.get(user = user_id)
+        return profile
+
 class Business(models.Model):
     name = models.CharField(max_length = 65)
     user = models.ForeignKey(User)
