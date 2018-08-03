@@ -21,7 +21,23 @@ class Neighbourhood(models.Model):
 
     def delete_hood(self):
         self.delete()
+class Profile(models.Model):
+    name = models.CharField(max_length = 65, blank=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    hood = models.ForeignKey(Neighbourhood, blank=True)
+
+     def __str__(self):
+        return self.name
+
+
+    def save_profile(self):
+        self.save()
+
+    def delete_profile(self):
+        self.delete()
 
 
 
-        
+
+
+
