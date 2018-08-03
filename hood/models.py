@@ -7,7 +7,7 @@ from django.db import IntegrityError
 
 # Create your models here.
 class Neighbourhood(models.Model):
-    name = models.CharField(max_lenghth = 65)
+    name = models.CharField(max_length = 65)
     location = models.CharField(max_length = 65)
     occupants = models.PositiveIntegerField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -21,13 +21,13 @@ class Neighbourhood(models.Model):
 
     def delete_hood(self):
         self.delete()
-        
+
 class Profile(models.Model):
     name = models.CharField(max_length = 65, blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     hood = models.ForeignKey(Neighbourhood, blank=True)
 
-     def __str__(self):
+    def __str__(self):
         return self.name
 
 
@@ -38,12 +38,12 @@ class Profile(models.Model):
         self.delete()
 
 class Business(models.Model):
-    name = models.CharField(max_lenth = 65)
+    name = models.CharField(max_length = 65)
     user = models.ForeignKey(User)
     hood = models.ForeignKey(Neighbourhood, on_delete=models.CASCADE)
 
 
-     def __str__(self):
+    def __str__(self):
         return self.name
 
 
@@ -55,6 +55,7 @@ class Business(models.Model):
 
 
 class Post(models.Model):
+
     user = models.ForeignKey(Profile, on_delete=models.CASCADE)
     post = models.TextField(max_length=300)
     hood = models.ForeignKey(Neighbourhood, on_delete=models.CASCADE)
