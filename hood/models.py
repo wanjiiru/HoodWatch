@@ -53,6 +53,16 @@ class Business(models.Model):
         self.delete()
 
 
+    class Post(models.Model):
+        user = models.ForeignKey(Profile, on_delete=models.CASCADE)
+        post = models.TextField(max_length=300)
+        hood = models.ForeignKey(Neighbourhood, on_delete=models.CASCADE)
+        location = models.CharField(max_length = 65)
+        
+        def __str__(self):
+            return self.post
+
+
 
 
 
