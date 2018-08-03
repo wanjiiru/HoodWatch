@@ -29,3 +29,13 @@ def create_business(request):
         form = BusinessForm()
     return render(request,"business.html",locals())
 
+
+def display_business(request):
+    user = request.user
+    owner = Profile.get_by_id(user)
+
+    return render (request, 'business.html', locals())
+
+
+    
+

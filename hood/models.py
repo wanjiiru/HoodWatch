@@ -26,6 +26,7 @@ class Profile(models.Model):
     name = models.CharField(max_length = 65, blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     hood = models.ForeignKey(Neighbourhood, blank=True)
+    bio = models.TextField(max_length=200)
 
     def __str__(self):
         return self.name
