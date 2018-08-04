@@ -16,11 +16,10 @@ def home(request):
 
 
 
-@transaction.atomic
 def create_profile(request):
-    current_user = request.user 
+    profile = User.objects.get(username=request.user)
     if request.method == 'POST':
-        form = ProfileForm(request.POST,instance=request.user)
+        form = ProfileForm(request.POST,request.FILES)
         if form.is_valid():
             form.save()
             return redirect( home )
@@ -30,15 +29,16 @@ def create_profile(request):
 
 def create_business(request):
     current_user = request.user
-    # owner = Profile.get_by_id(current_user)
-    # hood = Neighbourhood.objects.all()
+    print(Profile.objects.all())
+    owner = Profile.get_by_id(current_user)
+    # this_hood = Neighbourhood.objects.all()
     if request.method == 'POST':
         form = BusinessForm(request.POST,request.FILES)
         if form.is_valid():
-            new_biz=form.save(commit = False)
-            new_biz.owner = current_user
-            # new_biz.hood =hood
-            new_biz.save
+            new_biz=form.save(commit=False)
+            new_biz.user = current_user
+            # new_biz.hood =this_hood
+            new_biz.save()
             return redirect(home)
     else:
         form = BusinessForm()
