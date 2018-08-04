@@ -1,29 +1,47 @@
-<nav class="navbar navbar-expand navbar-dark bg-dark" id="navMain">
+<nav class="navbar navbar-expand navbar-dark bg-dark" id="navMain" xmlns="http://www.w3.org/1999/html">
+    <a class="" href="/"><i class="fa fa-home"style="font-size:30px;color:red" ></i></a>
+
         <div class="container">
-            <a class="" href="/"><i class="fa fa-home"style="font-size:30px;color:black" ></i></a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa fa-bars"></i>
-            </button>
+
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+
+
+         <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    HoodWatch
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <a class="dropdown-item"  href="{%  url 'business' %}" type="button">Add a business</a>
+                <button class="dropdown-item" type="button">View hoods</button>
+                </div>
+
+         </div>
+
+            <br>
             
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <div class="container-fluid">                     
+                <div class="container-fluid">
                 <ul class="navbar-nav " style="list-style: none">
+
                     <li class="nav-item">
                         {% if user.is_authenticated %}
-                        <a class="nav-link open-nav" href=""><i class="fa fa-user" style="font-size:30px;color:black"><h1>{{user}}</h1></i></a>
-                    </li
+                        <a class="nav-link open-nav" href=""><i class="fa fa-user" style="font-size:30px;color:red"><small>{{ user }}</small></i></a>
+                    </li>
     
                 </ul>
-    
-                <ul  class="navbar-nav ml-auto" style="list-style: none">
+
+
+                                    {%endif%}
+
+            </div>
+        </div>
+
+
+         <ul  class="navbar-nav ml-auto" style="list-style: none">
                        <li>
-                           <i class="fa fa-sign-out" aria-hidden="true"></i>
+                           <i class="fa fa-sign-out"  style="font-size:30px;color:red" aria-hidden="true"></i>
                         <a href="/logout">Logout</a>
                        </li>
                 </ul>
-                                    {%endif%}
-    
-            </div>
         </div>
     </nav>

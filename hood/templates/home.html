@@ -8,12 +8,11 @@
     {% for business in businesses %}
         <div class="col-md-4">
             <div class="card" style="width: 25rem">
-        <h5>Name :{{business.name}}</h5>
+        <p><i class="fa fa-building">{{business.name}}</i></p>
         <p>Owner :{{business.user}}</p>
-           <p></p> <i class="fa fa-envelope" aria-hidden="true"></i>
-
-            <p>email :{{business.email}}</p>
-            <small><a href="#">Neighbourhood :{{business.hood}}</a></small>
+                <p><i class="fa fa-envelope" aria-hidden="true"> {{ business.email }}
+                </i></p>
+                <p><a href="#">Neighbourhood :{{business.hood}}</a></p>
 </div>
         </div>
     {% endfor %}
