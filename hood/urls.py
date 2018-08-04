@@ -9,5 +9,7 @@ urlpatterns = [
         url(r'^business/',views.create_business,name = 'business'),
         url(r'^accounts/', include('registration.backends.simple.urls')),
         url(r'^profile/create/',views.create_profile,name = 'profile'),
+        url(r'^new/post$', views.new_post, name='newpost'),
+        url(r'^post/',views.post,name = 'post'),
 
 ]

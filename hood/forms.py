@@ -5,7 +5,7 @@ from django.contrib.auth.forms import AuthenticationForm
 class BusinessForm(forms.ModelForm):
     class Meta:
         model  = Business
-        fields = ['name','hood']
+        fields = ['name','hood','email']
 
 
 class ProfileForm(forms.ModelForm):

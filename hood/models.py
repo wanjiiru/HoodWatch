@@ -73,7 +73,7 @@ class Profile(models.Model):
 
 class Business(models.Model):
     name = models.CharField(max_length = 65)
-    user = models.OneToOneField(User)
+    user = models.ForeignKey(User)
     hood = models.ForeignKey(Neighbourhood)
     email = models.CharField(max_length=100)
 

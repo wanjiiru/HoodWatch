@@ -1,22 +1,23 @@
 
 {% extends 'registration/base.html'%}
 {% block content %}
-<div class="col-md-3"></div>
+    <h4 style="text-align:center;"> Local Businesses!</h4>
 
-<div class="col-md-3" style="margin-top: 100px">
-    <h4 style="text-align:center;"> Business!</h4>
-    <!-- <a href="{% url 'business' %}" >Create Profile <span style="font-size:35px; "></span></a>     -->
+<div class="container">
+<div class="row">
     {% for business in businesses %}
-    <!-- {% if business.neighborhood_id == current_neighborhood %} -->
-    <div class="well">
-        <h3>{{business.name}}</h3>
-        <p>{{business.user}}</p>
-        <p>{{business.hood}}</p>
+        <div class="col-md-4">
+            <div class="card" style="width: 25rem">
+        <h5>Name :{{business.name}}</h5>
+        <p>Owner :{{business.user}}</p>
+           <p></p> <i class="fa fa-envelope" aria-hidden="true"></i>
 
-    </div>
-
-    <!-- {% endif %} -->
+            <p>email :{{business.email}}</p>
+            <small><a href="#">Neighbourhood :{{business.hood}}</a></small>
+</div>
+        </div>
     {% endfor %}
-<div class="col-md-3"></div>
+</div>
+</div>
 
 {% endblock %}
