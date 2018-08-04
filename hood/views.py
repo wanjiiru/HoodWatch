@@ -54,5 +54,36 @@ def display_business(request):
     return render (request, 'business.html', locals())
 
 
+@login_required(login_url='/accounts/login/')
+def new_post(request):
+
+    current_user = request.user
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.save()
+            return redirect('index')
+    else:
+        form = PostForm()
+    return render(request, 'new_post.html', {"form": form})
+
+
+@login_required(login_url='/accounts/login/')
+def post(request):
+    post = Post.get_post()
+    return render(request,'post.html',{'post':post})
+
+def leave_hood(request):
+    current_user = request.user
+    if request.method == 'POST':
+        form = HoodForm(request.POST )
+        if form.is_valid():
+            neighborhoods = Neighborhood()
+            hood=form.save(commit=False)
+            hood.save()
+            return render(request,'leave.html',{"form": form})
+
+
 
 
