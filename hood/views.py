@@ -168,6 +168,19 @@ def comment(request,post_id):
 
         return render(request, 'comment.html', locals())
 
+def search(request):
+
+    if request.GET['search']:
+        search_term = request.GET.get("search")
+        hoods = Neighbourhood.search_hood(search_term)
+        message = f"{search_term}"
+
+        return render(request,'hood/search.html',{"message":message,"hoods":hoods})
+
+    else:
+        message = "You Haven't searched for any item"
+        return render(request,'hood/search.html',{"message":message})
+
 
 
 
