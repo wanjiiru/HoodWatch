@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from .models import Post,Profile,Neighbourhood,Business,Join
-from django.db import transaction
 from django.contrib import messages
 from . forms import ProfileForm,BusinessForm,PostForm
 from django.contrib.auth.models import User
@@ -10,6 +9,26 @@ from django.contrib.auth.models import User
 # Create your views here.
 @login_required(login_url = '/accounts/login')
 def home(request):
+    hoods = Neighbourhood.objects.all()
+    business = Business.objects.all()
+
+    print(business)
+    return render(request,'home.html',locals())
+
+@login_required(login_url = '/accounts/login')
+def all_hoods(request):
+
+    if request.user.is_authenticated:
+        if Join.objects.filter(user_id=request.user).exists():
+            hood = Neighbourhood.objects.get(pk=request.user.join.hood_id.id)
+            businesses = Business.objects.filter(hood=request.user.join.hood_id.id)
+            return render(request, "hood.html", locals())
+        else:
+            neighbourhoods = Neighbourhood.objects.all()
+            return render(request, 'home.html', locals())
+    else:
+        neighbourhoods = Neighbourhood.objects.all()
+        return render(request, 'hood.html', locals())
 
 
 
@@ -40,6 +59,20 @@ def create_profile(request):
     else:
         form = ProfileForm()
     return render(request,'new_profile.html', locals())
+
+
+@login_required(login_url='/accounts/login/')
+def join(request, hoodId):
+    neighbourhood = Neighbourhood.objects.get(pk=hoodId)
+    if Join.objects.filter(user_id=request.user).exists():
+
+        Join.objects.filter(user_id=request.user).update(hood_id=neighbourhood)
+    else:
+
+        Join(user_id=request.user, hood_id=neighbourhood).save()
+
+    messages.success(request, 'Success! You have succesfully joined this Neighbourhood ')
+    return redirect('home')
 
 def create_business(request):
     current_user = request.user
@@ -87,22 +120,6 @@ def new_post(request):
 def post(request):
     post = Post.get_post()
     return render(request,'post.html',locals())
-
-
-@login_required(login_url='/accounts/login/')
-def join(request, hoodId):
-    neighbourhood = Neighbourhood.objects.get(pk=hoodId)
-    if Join.objects.filter(user_id=request.user).exists():
-
-        Join.objects.filter(user_id=request.user).update(hood_id=neighbourhood)
-    else:
-
-        Join(user_id=request.user, hood_id=neighbourhood).save()
-
-    messages.success(request, 'Success! You have succesfully joined this Neighbourhood ')
-    return redirect('home')
-
-
 
 
 
