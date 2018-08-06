@@ -119,18 +119,23 @@ def createHood(request):
 
 
 @login_required(login_url='/accounts/login/')
-def new_post(request):
-    current_user = request.user
-    this_hood = Neighbourhood.objects.all()
-    if request.method == 'POST':
-        form = PostForm(request.POST, request.FILES)
-        if form.is_valid():
-            post = form.save(commit=False)
-            post.save()
-            return redirect('index')
+def createPost(request):
+    if Join.objects.filter(user_id = request.user).exists():
+        if request.method == 'POST':
+            form = PostForm(request.POST)
+            if form.is_valid():
+                post = form.save(commit = False)
+                post.user = request.user
+                post.hood = request.user.join.hood_id
+                post.save()
+                messages.success(request,'You have succesfully created a Forum Post')
+                return redirect('index')
+        else:
+            form = PostForm()
+            return render(request,'newpost.html',{"form":form})
     else:
-        form = PostForm()
-    return render(request, 'newpost.html', locals())
+        messages.error(request, 'Error! You can only create a forum post after Joining/Creating a neighbourhood')
+        return redirect(request,'newpost.html')
 
 
 @login_required(login_url='/accounts/login/')

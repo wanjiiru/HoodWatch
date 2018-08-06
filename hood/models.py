@@ -99,9 +99,9 @@ class Business(models.Model):
 class Post(models.Model):
 
     user = models.ForeignKey(Profile, on_delete=models.CASCADE)
-    post = models.TextField(max_length=300)
+    description = models.TextField(max_length=300)
     hood = models.ForeignKey(Neighbourhood, blank=True,on_delete=models.CASCADE)
-    location = models.CharField(max_length = 65)
+    title = models.CharField(max_length = 65)
         
     def __str__(self):
         return self.post

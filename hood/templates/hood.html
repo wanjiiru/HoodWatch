@@ -12,7 +12,7 @@
 				<h4>County: <strong>{{hood.loc.capitalize}}</strong> Hood Population : <strong>{{hood.occupants}}</strong></h4>
 				<h4>{{hood.bio}}</h4>
 
-				<a class="btn btn-sm btn-success" href="">Create Forum Post</a>
+				<a class="btn btn-sm btn-success" href="{% url 'newpost' %}">Create a Post</a>
 				<a class="btn btn-sm btn-danger" href="  {% url 'business' %}">Add busines</a>
 
 				<p>
