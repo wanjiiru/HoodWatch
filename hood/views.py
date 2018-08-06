@@ -11,8 +11,8 @@ from django.contrib.auth.models import User
 def home(request):
     hoods = Neighbourhood.objects.all()
     business = Business.objects.all()
+    posts = Post.objects.all()
 
-    print(business)
     return render(request,'home.html',locals())
 
 @login_required(login_url = '/accounts/login')
@@ -22,12 +22,15 @@ def all_hoods(request):
         if Join.objects.filter(user_id=request.user).exists():
             hood = Neighbourhood.objects.get(pk=request.user.join.hood_id.id)
             businesses = Business.objects.filter(hood=request.user.join.hood_id.id)
+            posts = Post.objects.filter(hood=request.user.join.hood_id.id)
+            print(posts)
             return render(request, "hood.html", locals())
         else:
             neighbourhoods = Neighbourhood.objects.all()
             return render(request, 'hood.html', locals())
     else:
         neighbourhoods = Neighbourhood.objects.all()
+
         return render(request, 'hood.html', locals())
 
 
@@ -119,23 +122,24 @@ def createHood(request):
 
 
 @login_required(login_url='/accounts/login/')
-def createPost(request):
+def new_post(request):
+    current_user = request.user
     if Join.objects.filter(user_id = request.user).exists():
         if request.method == 'POST':
             form = PostForm(request.POST)
             if form.is_valid():
                 post = form.save(commit = False)
-                post.user = request.user
-                post.hood = request.user.join.hood_id
+                post.user = current_user
+                post.hood = current_user.join.hood_id
                 post.save()
                 messages.success(request,'You have succesfully created a Forum Post')
-                return redirect('index')
+                return redirect('hoods')
         else:
             form = PostForm()
-            return render(request,'newpost.html',{"form":form})
+            return render(request,'newpost.html',locals())
     else:
         messages.error(request, 'Error! You can only create a forum post after Joining/Creating a neighbourhood')
-        return redirect(request,'newpost.html')
+        return redirect(request,'newpost.html',locals())
 
 
 @login_required(login_url='/accounts/login/')

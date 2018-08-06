@@ -98,13 +98,13 @@ class Business(models.Model):
 
 class Post(models.Model):
 
-    user = models.ForeignKey(Profile, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     description = models.TextField(max_length=300)
     hood = models.ForeignKey(Neighbourhood, blank=True,on_delete=models.CASCADE)
     title = models.CharField(max_length = 65)
         
     def __str__(self):
-        return self.post
+        return self.description
 
 class Join(models.Model):
     user_id = models.OneToOneField(User)
