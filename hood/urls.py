@@ -15,5 +15,6 @@ urlpatterns = [
         url(r'^join/(\d+)', views.join, name='joinHood'),
         url(r'^createHood/$', views.createHood, name='createHood'),
         url(r'^comment/(?P<post_id>\d+)', views.comment, name='comment'),
+        url(r'^search/$', views.search, name='search'),
 
 ]

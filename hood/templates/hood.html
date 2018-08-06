@@ -63,6 +63,17 @@
                                   </tbody>
                                 </table>
                 {%if posts%}
+                    <div class="row">
+				    		<div class="col-md-7"></div>
+				    		<div class="col-md-5">
+				    			<form class="" class="" action="{% url 'search' %}">
+						            <div class="form-group">
+						              <input type="text" class="form-control" placeholder="Search Forum" name = "searchForum">
+						            </div>
+
+						        </form>
+				    		</div>
+				    	</div
 
 				    	<div class="row">
 				    		{% for post in posts %}

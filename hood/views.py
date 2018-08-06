@@ -175,11 +175,11 @@ def search(request):
         hoods = Neighbourhood.search_hood(search_term)
         message = f"{search_term}"
 
-        return render(request,'hood/search.html',{"message":message,"hoods":hoods})
+        return render(request,'search.html',locals())
 
     else:
         message = "You Haven't searched for any item"
-        return render(request,'hood/search.html',{"message":message})
+        return render(request,'search.html',locals())
 
 
 

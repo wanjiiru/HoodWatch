@@ -35,6 +35,18 @@
 
             </div>
         </div>
+             <div class="collapse navbar-collapse" id="navbarResponsive">
+            <div class="container-fluid">
+                                    {% if user.is_authenticated %}
+                <div class="row">
+                    <div class="col-md-12 nav-search">
+                        <form class="form-inline my-2 my-lg-0" role="search" action="{% url 'search' %}">
+                            <input class="form-control my-2 my-sm-0 search-input" name="hoods" type="search" placeholder="Search businesses" aria-label="Search">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {%endif%}
 
 
          <ul  class="navbar-nav ml-auto" style="list-style: none">
