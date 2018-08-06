@@ -1,6 +1,7 @@
 
 
 {% extends 'registration/base.html' %}
+{% load bootstrap4 %}
 {% block content %}
 
 <div class="container">
@@ -13,13 +14,19 @@
        <div class="panel-heading">
          {{hood.name.capitalize}}
        </div>
-       <div class="panel-body">
-         <p>{{hood.occupants}}</p>
-           <p>{{ hood.loc }}</p>
+       <div class="card">
+         <p>{{hood.occupants}} Occupants </p>
+           <p> <i class="fa fa-map-marker" aria-hidden="true"> {{ hood.loc }}</i></p>
          <a href="" class="btn btn-sm btn-success">Join</a>
        </div>
      </div>
    </div>
+
+
+       {% for biz in business %}
+           {{ biz.name }}
+
+           {% endfor %}
    {% endfor %}
  </div>
 </div>

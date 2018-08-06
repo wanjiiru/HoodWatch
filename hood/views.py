@@ -9,8 +9,6 @@ from django.contrib.auth.models import User
 # Create your views here.
 @login_required(login_url = '/accounts/login')
 def home(request):
-    hoods = Neighbourhood.objects.all()
-    return render(request,'home.html',locals())
 
 
 
@@ -21,6 +19,7 @@ def display_profile(request, id):
     seekuser=User.objects.filter(id=id).first()
     profile = seekuser.profile
     profile_details = Profile.get_by_id(id)
+
 
 
     return render(request,'profile.html',locals())
@@ -87,6 +86,25 @@ def new_post(request):
 def post(request):
     post = Post.get_post()
     return render(request,'post.html',locals())
+
+
+@login_required(login_url='/accounts/login/')
+def join(request, hoodId):
+    '''
+    This view function will implement adding
+    '''
+    neighbourhood = Neighbourhood.objects.get(pk=hoodId)
+    if Join.objects.filter(user_id=request.user).exists():
+
+        Join.objects.filter(user_id=request.user).update(hood_id=neighbourhood)
+    else:
+
+        Join(user_id=request.user, hood_id=neighbourhood).save()
+
+    messages.success(request, 'Success! You have succesfully joined this Neighbourhood ')
+    return redirect('home')
+
+
 
 
 

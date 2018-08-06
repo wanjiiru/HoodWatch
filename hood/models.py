@@ -30,6 +30,8 @@ class Neighbourhood(models.Model):
 
 
 
+
+
     def __str__(self):
         return f"{self.loc}"
 
@@ -88,6 +90,11 @@ class Business(models.Model):
     def delete_business(self):
         self.delete()
 
+    @classmethod
+    def get_biz(cls, hood):
+        hoods = Business.objects.filter(hood_id=Neighbourhood)
+        return hoods
+
 
 class Post(models.Model):
 
@@ -99,6 +106,12 @@ class Post(models.Model):
     def __str__(self):
         return self.post
 
+class Join(models.Model):
+    user_id = models.OneToOneField(User)
+    hood_id = models.ForeignKey(Neighbourhood)
+
+    def __str__(self):
+        return self.user_id
 
 
 
