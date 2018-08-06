@@ -12,7 +12,6 @@ urlpatterns = [
         url(r'^profile/create/',views.create_profile,name = 'profile'),
         url(r'^showprofile/(?P<id>\d+)', views.display_profile, name='showprofile'),
         url(r'^new/post$', views.new_post, name='newpost'),
-        url(r'^post/',views.post,name = 'post'),
         url(r'^join/(\d+)', views.join, name='joinHood'),
         url(r'^createHood/$', views.createHood, name='createHood'),
         url(r'^comment/(?P<post_id>\d+)', views.comment, name='comment'),

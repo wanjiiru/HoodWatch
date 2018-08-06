@@ -72,8 +72,20 @@
                                           </div>
                                           <div class="card-body">
                                               <p>{{post.description}}
-                                <p><a href=""><i class="fa fa-comment" aria-hidden="true" style="color:black;"></i>Add Comment</a></p>
-                        <hr>
+                                <p><a href="{% url 'comment' post_id=post.id %}"><i class="fa fa-comment" aria-hidden="true" style="color:black;"></i>Add Comment</a></p>
+
+                                {%if comments%}
+                                    <small>Comments</small>
+                                                {% for comment in comments %}
+                                                    <p>{{ comment.comment }}</p>
+
+                                                {% endfor %}
+
+
+                                            {% else %}
+                                            <h4 class="text-center">No comments</h4>
+                                            {% endif %}
+                                            <hr>
                                           </div>
                                       </div>
                                 </div>
@@ -86,9 +98,5 @@
 				    	<h4 class="text-center">No Post has been created for this hood yet. Be the first to create on <a href="{% url 'newpost' %}">here</a></h4>
 				    	{% endif %}
 
-
-			</div>
-                  </div>
-            </div>
 
 {%endblock%}

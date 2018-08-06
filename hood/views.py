@@ -23,6 +23,7 @@ def all_hoods(request):
             hood = Neighbourhood.objects.get(pk=request.user.join.hood_id.id)
             businesses = Business.objects.filter(hood=request.user.join.hood_id.id)
             posts = Post.objects.filter(hood=request.user.join.hood_id.id)
+            comments = Comments.objects.all()
             print(posts)
             return render(request, "hood.html", locals())
         else:
@@ -148,23 +149,24 @@ def comment(request,post_id):
     profile_owner = User.objects.get(username=current_user)
     comments = Comments.objects.all()
     print(comments)
-    if request.method == 'POST':
-        form = CommentForm(request.POST)
-        if form.is_valid():
-            comment = form.save(commit=False)
-            comment.post = post
-            comment.comment_owner = current_user
-            comment.save()
+    if Join.objects.filter(user_id=request.user).exists():
+        if request.method == 'POST':
+            form = CommentForm(request.POST)
+            if form.is_valid():
+                comment = form.save(commit=False)
+                comment.post = post
+                comment.user = current_user
+                comment.save()
 
-            print(comments)
+                print(comments)
 
 
-        return redirect(home)
+            return redirect(home)
 
-    else:
-        form = CommentForm()
+        else:
+            form = CommentForm()
 
-    return render(request, 'comment.html', locals())
+        return render(request, 'comment.html', locals())
 
 
 
