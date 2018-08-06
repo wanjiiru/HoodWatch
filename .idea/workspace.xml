@@ -78,14 +78,12 @@
       <file leaf-file-name="hood.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hood/templates/hood.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="71" column="99" lean-forward="false" selection-start-line="71" selection-start-column="99" selection-end-line="71" selection-end-column="99" />
+            <state relative-caret-position="408">
+              <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
               <folding>
-                <element signature="e#257#285#0#HTML" expanded="true" />
-                <element signature="e#313#338#0#HTML" expanded="true" />
-                <element signature="e#2757#2783#0#HTML" expanded="true" />
-                <element signature="e#2851#2877#0#HTML" expanded="true" />
-                <element signature="e#3254#3274#0#HTML" expanded="true" />
+                <element signature="e#2539#2565#0#HTML" expanded="true" />
+                <element signature="e#2633#2659#0#HTML" expanded="true" />
+                <element signature="e#3036#3056#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -966,14 +964,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hood/templates/hood.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="71" column="99" lean-forward="false" selection-start-line="71" selection-start-column="99" selection-end-line="71" selection-end-column="99" />
+        <state relative-caret-position="408">
+          <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
           <folding>
-            <element signature="e#257#285#0#HTML" expanded="true" />
-            <element signature="e#313#338#0#HTML" expanded="true" />
-            <element signature="e#2757#2783#0#HTML" expanded="true" />
-            <element signature="e#2851#2877#0#HTML" expanded="true" />
-            <element signature="e#3254#3274#0#HTML" expanded="true" />
+            <element signature="e#2539#2565#0#HTML" expanded="true" />
+            <element signature="e#2633#2659#0#HTML" expanded="true" />
+            <element signature="e#3036#3056#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
