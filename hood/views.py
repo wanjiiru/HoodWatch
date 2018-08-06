@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
-from .models import Post,Profile,Neighbourhood,Business
+from .models import Post,Profile,Neighbourhood,Business,Join
 from django.db import transaction
+from django.contrib import messages
 from . forms import ProfileForm,BusinessForm,PostForm
 from django.contrib.auth.models import User
 
@@ -90,9 +91,6 @@ def post(request):
 
 @login_required(login_url='/accounts/login/')
 def join(request, hoodId):
-    '''
-    This view function will implement adding
-    '''
     neighbourhood = Neighbourhood.objects.get(pk=hoodId)
     if Join.objects.filter(user_id=request.user).exists():
 

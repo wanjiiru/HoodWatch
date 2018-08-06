@@ -12,5 +12,6 @@ urlpatterns = [
         url(r'^showprofile/(?P<id>\d+)', views.display_profile, name='showprofile'),
         url(r'^new/post$', views.new_post, name='newpost'),
         url(r'^post/',views.post,name = 'post'),
+        url(r'^join/(\d+)', views.join, name='joinHood'),
 
 ]
