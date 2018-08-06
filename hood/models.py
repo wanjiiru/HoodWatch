@@ -43,7 +43,7 @@ class Neighbourhood(models.Model):
 class Profile(models.Model):
     name = models.CharField(max_length = 65, blank=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
-    # hood = models.ForeignKey(Neighbourhood)
+    hood = models.ForeignKey(Neighbourhood, blank=True, null=True)
     bio = models.TextField(max_length=200)
 
     def __str__(self):
@@ -60,10 +60,10 @@ class Profile(models.Model):
     def create_user_profile(sender, instance, created, **kwargs):
         if created:
             Profile.objects.create(user=instance)
-
-    @receiver(post_save, sender=User)
-    def save_user_profile(sender, instance, **kwargs):
-        instance.profile.save()
+    #
+    # @receiver(post_save, sender=User)
+    # def save_user_profile(sender, instance, **kwargs):
+    #     instance.profile.save()
 
     
     @classmethod
@@ -74,7 +74,7 @@ class Profile(models.Model):
 class Business(models.Model):
     name = models.CharField(max_length = 65)
     user = models.ForeignKey(User)
-    hood = models.ForeignKey(Neighbourhood)
+    hood = models.ForeignKey(Neighbourhood,blank=True)
     email = models.CharField(max_length=100)
 
 
@@ -93,7 +93,7 @@ class Post(models.Model):
 
     user = models.ForeignKey(Profile, on_delete=models.CASCADE)
     post = models.TextField(max_length=300)
-    hood = models.ForeignKey(Neighbourhood, on_delete=models.CASCADE)
+    hood = models.ForeignKey(Neighbourhood, blank=True,on_delete=models.CASCADE)
     location = models.CharField(max_length = 65)
         
     def __str__(self):

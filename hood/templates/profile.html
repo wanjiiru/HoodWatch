@@ -1,22 +1,35 @@
 {% extends 'registration/base.html' %}
-{% load staticfiles%}
+
+{% load static %}
 {% load bootstrap4 %}
+
+
 {% block content %}
-{{block.super}}
-<div class="container">
-    <div class="col-xs-0 col-sm-0 col-md-2 col-lg-2 col-xl-2"></div>
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-        <h3 style="text-align: center">Profile update</h3>
-        <form method="post" action="{% url 'profile' %}" enctype="multipart/form-data">
-            {% csrf_token %}
-            {% bootstrap_form form%}
-            <input type="submit" class="btn btn-primary btn-sm" value="Submit">
-            <input type="hidden" name="next" value="{{next}}">
+{{ form.media }}
 
-        </form>
+
+    <div class="container">
+        <div class="col-md-8">
+            <div class="row">
+                <div style="overflow:hidden; -webkit-border-radius:50px; -moz-border-radius:50px; border-radius:50px; width:90px;height:90px;">
+                </div>
+                <div class="col-md-5 text-center">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                                                <p>{{profile_details.bio}}</p>
+                                                {{ profile_details.user }}
+
+
+                        </li>
+
+
+                    </ul>
+
+                    <p><a href= "{% url 'business' %}">Create a business</a></p>
+                    <p><a href= "{% url 'business' %}">Make a Post</a></p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-xs-0 col-sm-0 col-md-4 col-lg-4 col-xl-4"></div>
-
-</div>
 
 {% endblock %}

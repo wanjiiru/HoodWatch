@@ -9,23 +9,37 @@ from django.contrib.auth.models import User
 # Create your views here.
 @login_required(login_url = '/accounts/login')
 def home(request):
-    posts = Post.objects.all()
-    businesses = Business.objects.all()
-    # hoods = Neighbourhood.objects.all()
+    hoods = Neighbourhood.objects.all()
     return render(request,'home.html',locals())
 
 
 
+
+
+@login_required(login_url='/accounts/login/')
+def display_profile(request, id):
+    seekuser=User.objects.filter(id=id).first()
+    profile = seekuser.profile
+    profile_details = Profile.get_by_id(id)
+
+
+    return render(request,'profile.html',locals())
+
+
+
 def create_profile(request):
-    profile = User.objects.get(username=request.user)
+    current_user = request.user
+    # profile = User.objects.get(username=current_user)
     if request.method == 'POST':
         form = ProfileForm(request.POST,request.FILES)
         if form.is_valid():
-            form.save()
-            return redirect( home )
+            profile=form.save(commit=False)
+            profile.user = current_user
+            profile.save()
+            redirect('home')
     else:
         form = ProfileForm()
-    return render(request,'profile.html', locals())
+    return render(request,'new_profile.html', locals())
 
 def create_business(request):
     current_user = request.user
@@ -73,16 +87,6 @@ def new_post(request):
 def post(request):
     post = Post.get_post()
     return render(request,'post.html',locals())
-
-# def leave_hood(request):
-#     current_user = request.user
-#     if request.method == 'POST':
-#         form = HoodForm(request.POST )
-#         if form.is_valid():
-#             neighborhoods = Neighborhood()
-#             hood=form.save(commit=False)
-#             hood.save()
-#             return render(request,'left.html',{"form": form})
 
 
 

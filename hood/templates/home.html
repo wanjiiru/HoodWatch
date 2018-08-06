@@ -1,22 +1,26 @@
 
-{% extends 'registration/base.html'%}
+
+{% extends 'registration/base.html' %}
 {% block content %}
-    <h4 style="text-align:center;"> Local Businesses!</h4>
 
 <div class="container">
-<div class="row">
-    {% for business in businesses %}
-        <div class="col-md-4">
-            <div class="card" style="width: 25rem">
-        <p><i class="fa fa-building">{{business.name}}</i></p>
-        <p>Owner :{{business.user}}</p>
-                <p><i class="fa fa-envelope" aria-hidden="true"> {{ business.email }}
-                </i></p>
-                <p><a href="#">Neighbourhood :{{business.hood}}</a></p>
-</div>
-        </div>
-    {% endfor %}
-</div>
-</div>
+ <div class="row" style="padding-top: 20px">
+     <a href=""> create hood here</a></h4>
 
+   {% for hood in hoods %}
+   <div class="col-md-4">
+     <div class="panel panel-default">
+       <div class="panel-heading">
+         {{hood.name.capitalize}}
+       </div>
+       <div class="panel-body">
+         <p>{{hood.occupants}}</p>
+           <p>{{ hood.loc }}</p>
+         <a href="" class="btn btn-sm btn-success">Join</a>
+       </div>
+     </div>
+   </div>
+   {% endfor %}
+ </div>
+</div>
 {% endblock %}
