@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10130717-10c9-4a1d-97e4-b8f1b12359b7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hood/templates/post.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hood/templates/home.html" afterPath="$PROJECT_DIR$/hood/templates/home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hood/templates/hood.html" afterPath="$PROJECT_DIR$/hood/templates/hood.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hood/templates/navbar.html" afterPath="$PROJECT_DIR$/hood/templates/navbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hood/templates/profile.html" afterPath="$PROJECT_DIR$/hood/templates/profile.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -83,14 +78,14 @@
       <file leaf-file-name="hood.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hood/templates/hood.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="75" column="134" lean-forward="false" selection-start-line="75" selection-start-column="134" selection-end-line="75" selection-end-column="134" />
+            <state relative-caret-position="696">
+              <caret line="71" column="99" lean-forward="false" selection-start-line="71" selection-start-column="99" selection-end-line="71" selection-end-column="99" />
               <folding>
                 <element signature="e#257#285#0#HTML" expanded="true" />
                 <element signature="e#313#338#0#HTML" expanded="true" />
                 <element signature="e#2757#2783#0#HTML" expanded="true" />
                 <element signature="e#2851#2877#0#HTML" expanded="true" />
-                <element signature="e#3237#3257#0#HTML" expanded="true" />
+                <element signature="e#3254#3274#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -971,14 +966,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hood/templates/hood.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="75" column="134" lean-forward="false" selection-start-line="75" selection-start-column="134" selection-end-line="75" selection-end-column="134" />
+        <state relative-caret-position="696">
+          <caret line="71" column="99" lean-forward="false" selection-start-line="71" selection-start-column="99" selection-end-line="71" selection-end-column="99" />
           <folding>
             <element signature="e#257#285#0#HTML" expanded="true" />
             <element signature="e#313#338#0#HTML" expanded="true" />
             <element signature="e#2757#2783#0#HTML" expanded="true" />
             <element signature="e#2851#2877#0#HTML" expanded="true" />
-            <element signature="e#3237#3257#0#HTML" expanded="true" />
+            <element signature="e#3254#3274#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
