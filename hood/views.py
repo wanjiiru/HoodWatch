@@ -25,7 +25,7 @@ def all_hoods(request):
             return render(request, "hood.html", locals())
         else:
             neighbourhoods = Neighbourhood.objects.all()
-            return render(request, 'home.html', locals())
+            return render(request, 'hood.html', locals())
     else:
         neighbourhoods = Neighbourhood.objects.all()
         return render(request, 'hood.html', locals())
@@ -72,7 +72,7 @@ def join(request, hoodId):
         Join(user_id=request.user, hood_id=neighbourhood).save()
 
     messages.success(request, 'Success! You have succesfully joined this Neighbourhood ')
-    return redirect('home')
+    return redirect('hoods')
 
 def create_business(request):
     current_user = request.user

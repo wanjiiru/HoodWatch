@@ -5,7 +5,7 @@ from . import views
 
 urlpatterns = [
         url(r'^$',views.home,name='home'),
-        url(r'^$', views.all_hoods, name='hoods'),
+        url(r'^hoods', views.all_hoods, name='hoods'),
         url(r'^business/view',views.display_business,name = 'viewbiz'),
         url(r'^business/',views.create_business,name = 'business'),
         url(r'^accounts/', include('registration.backends.simple.urls')),

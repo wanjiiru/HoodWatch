@@ -4,6 +4,7 @@
     <list default="true" id="10130717-10c9-4a1d-97e4-b8f1b12359b7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hood/templates/home.html" afterPath="$PROJECT_DIR$/hood/templates/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hood/templates/hood.html" afterPath="$PROJECT_DIR$/hood/templates/hood.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hood/urls.py" afterPath="$PROJECT_DIR$/hood/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hood/views.py" afterPath="$PROJECT_DIR$/hood/views.py" />
     </list>
@@ -44,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hood/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="456">
-              <caret line="19" column="35" lean-forward="false" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+              <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -98,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hood/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="1176">
+              <caret line="73" column="4" lean-forward="false" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -113,8 +114,8 @@
       <file leaf-file-name="hood.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hood/templates/hood.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="15" column="73" lean-forward="false" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
+            <state relative-caret-position="1128">
+              <caret line="50" column="154" lean-forward="false" selection-start-line="50" selection-start-column="154" selection-end-line="50" selection-end-column="154" />
               <folding>
                 <element signature="e#105#133#0#HTML" expanded="true" />
                 <element signature="e#161#186#0#HTML" expanded="true" />
@@ -138,8 +139,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hood/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="15" column="54" lean-forward="false" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="54" />
+            <state relative-caret-position="144">
+              <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -163,10 +164,10 @@
         <option value="$PROJECT_DIR$/hood/forms.py" />
         <option value="$PROJECT_DIR$/hoodwatch/settings.py" />
         <option value="$PROJECT_DIR$/hood/models.py" />
+        <option value="$PROJECT_DIR$/hood/templates/home.html" />
+        <option value="$PROJECT_DIR$/hood/urls.py" />
         <option value="$PROJECT_DIR$/hood/templates/hood.html" />
         <option value="$PROJECT_DIR$/hood/views.py" />
-        <option value="$PROJECT_DIR$/hood/urls.py" />
-        <option value="$PROJECT_DIR$/hood/templates/home.html" />
       </list>
     </option>
   </component>
@@ -934,10 +935,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hood/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hood/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hood/templates/hood.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="73" lean-forward="false" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
+        <state relative-caret-position="1128">
+          <caret line="50" column="154" lean-forward="false" selection-start-line="50" selection-start-column="154" selection-end-line="50" selection-end-column="154" />
           <folding>
             <element signature="e#105#133#0#HTML" expanded="true" />
             <element signature="e#161#186#0#HTML" expanded="true" />
@@ -947,28 +966,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hood/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="1176">
+          <caret line="73" column="4" lean-forward="false" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hood/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="15" column="54" lean-forward="false" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hood/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="19" column="35" lean-forward="false" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
