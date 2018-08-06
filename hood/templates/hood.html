@@ -1,6 +1,17 @@
 {%extends 'registration/base.html'%}
 {%load bootstrap4 %}
 {% block content%}
+
+<style>
+     .jumbotron{
+
+        width: 100%;
+        margin-left: 1%;
+        background-color: #447e9b;
+        text-align: center;
+    }
+
+</style>
 	<div class="row container" style="padding-bottom:20px;">
 
 			<div class="col-md-3" style="padding-top: 24px">
@@ -56,23 +67,17 @@
 
 				    	<div class="row">
 				    		{% for post in posts %}
-					    		<div class="panel panel-default">
-								  <div class="panel-body">
-								  	<div class="col-md-2">
-								  		{{post.user.capitalize}}
-								  	</div>
-								  	<div class="col-md-7">
-								  		<strong><a href="">{{post.title.capitalize}}</a></strong>
-                                        <strong><a href="">{{post.description.capitalize}}</a></strong>
-
-								  	</div>
-								  	<div class="col-md-3">
-
-								  	</div>
-
-								  </div>
-								</div>
-
+					    		<div class="jumbotron"><h3 style="text-align: center">Posts</h3>
+                                      <div class="card" style="margin-bottom:50px">
+                                          <div class="card-title">{{ post.title }}
+                                          </div>
+                                          <div class="card-body">
+                                              <p>{{post.description}}
+                                <p><a href=""><i class="fa fa-comment" aria-hidden="true" style="color:black;"></i>Add Comment</a></p>
+                        <hr>
+                                          </div>
+                                      </div>
+                                </div>
 
 				    		{% endfor %}
 

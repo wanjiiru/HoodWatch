@@ -4,17 +4,18 @@
 {% load bootstrap4 %}
 {% block content %}
 
+
 <div class="container">
- <div class="row" style="padding-top: 20px">
-     <a href="{% url 'createHood' %}"> create hood here</a></h4>
+    <a href="{% url 'createHood' %}"> create hood here</a></h4>
+    <hr>
+
+ <div class="row">
 
    {% for hood in hoods %}
    <div class="col-md-4">
-     <div class="panel panel-default">
-       <div class="panel-heading">
+     <div class="card">
          {{hood.name.capitalize}}
-       </div>
-       <div class="card">
+       <div class="card-body" style="width: auto">
          <p>{{hood.occupants}} Occupants </p>
            <p> <i class="fa fa-map-marker" aria-hidden="true"> {{ hood.loc }}</i></p>
          <a href=" {% url 'joinHood' hood.id %}" class="btn btn-sm btn-success">Join</a>
@@ -26,3 +27,5 @@
  </div>
 </div>
 {% endblock %}
+
+

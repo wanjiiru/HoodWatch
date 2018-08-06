@@ -7,17 +7,25 @@
 {% block content %}
 {{ form.media }}
 
+    <style>
+     .jumbotron{
+
+        width: 70%;
+        margin-left: 1%;
+        background-color: white;
+        text-align: center;
+    }
+
+</style>
+
 
     <div class="container">
-        <div class="col-md-8">
             <div class="row">
-                <div style="overflow:hidden; -webkit-border-radius:50px; -moz-border-radius:50px; border-radius:50px; width:90px;height:90px;">
-                </div>
-                <div class="col-md-5 text-center">
+                <div class="jumbotron">
                     <ul class="list-inline">
                         <li class="list-inline-item">
-                                                <p>{{profile_details.bio}}</p>
-                                                {{ profile_details.user }}
+                            <p>{{profile_details.bio}}</p>
+                            <p>{{ profile_details.user }}</p>
 
 
                         </li>
@@ -29,7 +37,6 @@
                     <p><a href= "{% url 'business' %}">Make a Post</a></p>
                 </div>
             </div>
-        </div>
     </div>
 
 {% endblock %}
