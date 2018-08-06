@@ -17,3 +17,9 @@ class PostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ['post','user']
+
+
+class CreateHoodForm(forms.ModelForm):
+    class Meta:
+        model = Neighbourhood
+        fields = ['name','loc','occupants']

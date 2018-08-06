@@ -101,6 +101,23 @@ def display_business(request):
     return render (request, 'business.html', locals())
 
 
+
+
+@login_required(login_url='/accounts/login/')
+def createHood(request):
+    if request.method == 'POST':
+        form = CreateHoodForm(request.POST)
+        if form.is_valid():
+            hood = form.save(commit = False)
+            hood.user = request.user
+            hood.save()
+            messages.success(request, 'You Have succesfully created a hood.You may now join your neighbourhood')
+            return redirect('home')
+    else:
+        form = CreateHoodForm()
+        return render(request,'create.html',{"form":form})
+
+
 @login_required(login_url='/accounts/login/')
 def new_post(request):
     current_user = request.user
