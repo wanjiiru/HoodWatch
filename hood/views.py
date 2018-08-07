@@ -116,7 +116,7 @@ def createHood(request):
             hood.user = request.user
             hood.save()
             messages.success(request, 'You Have succesfully created a hood.You may now join your neighbourhood')
-            return redirect('home')
+            return redirect('hoods')
     else:
         form = CreateHoodForm()
         return render(request,'create.html',{"form":form})
