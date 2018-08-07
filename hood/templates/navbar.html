@@ -4,7 +4,7 @@
         <div class="container">
 
                     <div class="collapse navbar-collapse" id="navbarResponsive">
-
+                        {% if user.is_authenticated %}
 
          <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -16,6 +16,8 @@
                 </div>
 
          </div>
+                                {%endif%}
+
 
             <br>
             

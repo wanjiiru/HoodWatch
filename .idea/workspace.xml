@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10130717-10c9-4a1d-97e4-b8f1b12359b7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hood/templates/search.html" afterPath="$PROJECT_DIR$/hood/templates/search.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hood/templates/navbar.html" afterPath="$PROJECT_DIR$/hood/templates/navbar.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,7 +53,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hood/templates/search.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="744">
@@ -83,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="navbar.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="navbar.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hood/templates/navbar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="14" column="64" lean-forward="false" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
+            <state relative-caret-position="456">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -160,11 +160,11 @@
         <option value="$PROJECT_DIR$/hood/tests.py" />
         <option value="$PROJECT_DIR$/hood/urls.py" />
         <option value="$PROJECT_DIR$/hood/templates/hood.html" />
-        <option value="$PROJECT_DIR$/hood/templates/navbar.html" />
         <option value="$PROJECT_DIR$/hood/templates/home.html" />
         <option value="$PROJECT_DIR$/hood/models.py" />
         <option value="$PROJECT_DIR$/hood/views.py" />
         <option value="$PROJECT_DIR$/hood/templates/search.html" />
+        <option value="$PROJECT_DIR$/hood/templates/navbar.html" />
       </list>
     </option>
   </component>
@@ -958,14 +958,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hood/templates/navbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="64" lean-forward="false" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hood/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -996,6 +988,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="744">
           <caret line="31" column="7" lean-forward="false" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hood/templates/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
