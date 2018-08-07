@@ -1,35 +1,28 @@
 {%extends 'registration/base.html'%}
+{% load bootstrap4 %}
 {% block content%}
 
+    <div class="container">
+		<div class="row">
+		  <h3>Search results for the search term: <strong>{{message}}</strong></h3>
 
-
-	<div class="col-md-1"></div>
-	<div class="col-md-10">
-		<div class="panel panel-default">
-		  <div class="panel-heading"><h3>Search results for the search term: <strong>{{message}}</strong></h3></div>
-		  </div>
 		  {%if hoods%}
-		 <div class="row">
 		  	{% for hood in hoods %}
-				<div class="col-md-4">
-					<div class="panel panel-default">
+				<div class="card">
 
-						<div class="panel-heading">
-							{{hood.namee}}
+						<div class="card-title">
+							{{hood.name}}
 						</div>
-						<div class="panel-body">
+						<div class="card-body">
 							<p>{{hood.loc}}</p>
 
-
 						</div>
 
-					</div>
 				</div>
 
 		{%endfor%}
-		</div>
-		{%else%}
-		<div class="panel-body">
+		{% else %}
+		<div class="col-md-6">
 				<h4 class="text-center">No neighbourhood with the name <strong>{{message}}</strong> exists! You can however create it <a href="{% url 'createHood' %}">here</a></h4>
 			</div>
 		{%endif%}
@@ -37,7 +30,7 @@
 
 
 	</div>
-	<div class="col-md-1"></div>
+    </div>
 
 
 
