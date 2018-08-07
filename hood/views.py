@@ -170,9 +170,9 @@ def comment(request,post_id):
 
 def search(request):
 
-    if request.GET['search']:
-        search_term = request.GET.get("search")
-        hoods = Neighbourhood.search_hood(search_term)
+    if request.GET['hoods']:
+        search_term = request.GET.get("hoods")
+        hoods = Neighbourhood.search(search_term)
         message = f"{search_term}"
 
         return render(request,'search.html',locals())
