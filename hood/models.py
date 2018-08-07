@@ -28,6 +28,10 @@ class Neighbourhood(models.Model):
     class Meta:
         verbose_name_plural = 'Location'
 
+    @classmethod
+    def search_hood(cls, search_term):
+        hoods = cls.objects.filter(name__icontains=search_term)
+        return hoods
 
 
 

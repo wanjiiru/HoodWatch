@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10130717-10c9-4a1d-97e4-b8f1b12359b7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hood/templates/home.html" afterPath="$PROJECT_DIR$/hood/templates/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hood/models.py" afterPath="$PROJECT_DIR$/hood/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hood/views.py" afterPath="$PROJECT_DIR$/hood/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,18 +35,18 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hood/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="119" column="33" lean-forward="false" selection-start-line="119" selection-start-column="33" selection-end-line="119" selection-end-column="33" />
+            <state relative-caret-position="696">
+              <caret line="33" column="20" lean-forward="false" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hood/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="118" column="34" lean-forward="false" selection-start-line="118" selection-start-column="34" selection-end-line="118" selection-end-column="34" />
+            <state relative-caret-position="892">
+              <caret line="174" column="42" lean-forward="false" selection-start-line="174" selection-start-column="42" selection-end-line="174" selection-end-column="42" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -63,7 +64,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hood/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="192">
@@ -155,16 +156,16 @@
         <option value="$PROJECT_DIR$/hoodwatch/settings.py" />
         <option value="$PROJECT_DIR$/hood/templates/create.html" />
         <option value="$PROJECT_DIR$/hood/templates/profile.html" />
-        <option value="$PROJECT_DIR$/hood/models.py" />
         <option value="$PROJECT_DIR$/hood/forms.py" />
         <option value="$PROJECT_DIR$/hood/templates/comment.html" />
         <option value="$PROJECT_DIR$/hood/tests.py" />
         <option value="$PROJECT_DIR$/hood/urls.py" />
         <option value="$PROJECT_DIR$/hood/templates/hood.html" />
         <option value="$PROJECT_DIR$/hood/templates/search.html" />
-        <option value="$PROJECT_DIR$/hood/views.py" />
         <option value="$PROJECT_DIR$/hood/templates/navbar.html" />
         <option value="$PROJECT_DIR$/hood/templates/home.html" />
+        <option value="$PROJECT_DIR$/hood/models.py" />
+        <option value="$PROJECT_DIR$/hood/views.py" />
       </list>
     </option>
   </component>
@@ -912,14 +913,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hood/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="119" column="33" lean-forward="false" selection-start-line="119" selection-start-column="33" selection-end-line="119" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hood/templates/comment.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -974,16 +967,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hood/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="118" column="34" lean-forward="false" selection-start-line="118" selection-start-column="34" selection-end-line="118" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hood/templates/navbar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -997,6 +980,24 @@
         <state relative-caret-position="192">
           <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hood/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="33" column="20" lean-forward="false" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hood/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="892">
+          <caret line="174" column="42" lean-forward="false" selection-start-line="174" selection-start-column="42" selection-end-line="174" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -172,7 +172,7 @@ def search(request):
 
     if request.GET['hoods']:
         search_term = request.GET.get("hoods")
-        hoods = Neighbourhood.search(search_term)
+        hoods = Neighbourhood.search_hood(search_term)
         message = f"{search_term}"
 
         return render(request,'search.html',locals())
